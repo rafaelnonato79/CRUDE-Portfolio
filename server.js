@@ -8,9 +8,6 @@ const projectRoutes = require('./routes/projectRoutes');   // Rotas de projetos
 
 const app = express();
 
-//Serve os arquivos estaticos da pasta 'public'
-app.use(express.static(path.join(__dirname, 'public')));
-
 // Middleware
 app.use(express.json());
 app.use(cors())

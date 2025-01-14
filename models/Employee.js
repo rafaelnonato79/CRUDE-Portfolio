@@ -7,7 +7,12 @@ const EmployeeSchema = new mongoose.Schema({
     issues: { type: Number, required: true },
     nome: { type: String, required: true },
     pra_cima: { type: Number, required: true },
-    projetos: { type: [String], required: true }, // Lista de projetos
+    projetos: [
+        {
+        id: { type: String, required: true },
+        nome: { type: String, required: true },
+        logo: { type: String, required: true },
+        }], // Lista de projetos
     tempo_de_empresa_em_meses: { type: Number, required: true },
     timeline: [
         {

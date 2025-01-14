@@ -10,7 +10,14 @@ const ProjectSchema = new mongoose.Schema({
     link: { type: String, required: true }, 
     cores: { type: [String], required: true }, 
     tecnologias: { type: [String], required: true }, 
-    desenvolvedores: { type: [String], required: true } 
+    desenvolvedores: [
+        {
+            id: { type: [String], required: true },
+            nome: { type: [String], required: true },
+            foto: { type: [String], required: true },
+            cargo: { type: [String], required: true } 
+        }
+    ]
 });
 
 module.exports = mongoose.model('Project', ProjectSchema);
